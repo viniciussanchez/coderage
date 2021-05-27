@@ -1,19 +1,19 @@
 {
 	"hash": "6ef9161b900632671022358216c7dfe7",
-	"updated": "2019-10-15T21:40:28.6385906-03:00",
+	"updated": "2021-05-27T15:59:00.9292705-03:00",
 	"installedModules": {
 		"github.com/hashload/horse": {
 			"name": "horse",
-			"version": "1.6.8",
-			"hash": "7a0b2394ac49dbd1a62f6d1021cac5b9",
+			"version": "2.0.13",
+			"hash": "32daa5a81f115ecc285cbbbbdbcddcea",
 			"artifacts": {},
 			"failed": false,
 			"changed": false
 		},
 		"github.com/hashload/horse-octet-stream": {
 			"name": "horse-octet-stream",
-			"version": "0.1.6",
-			"hash": "da1e871df72beb0d246297ea925a892e",
+			"version": "1.9.4",
+			"hash": "c04011f2536230c603e0dde14da6aabf",
 			"artifacts": {},
 			"failed": false,
 			"changed": false

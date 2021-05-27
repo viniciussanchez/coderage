@@ -10,22 +10,24 @@ uses
 
 {$R *.res}
 
-var
-  App: THorse;
-
 begin
-  App := THorse.Create(9000);
+  THorse.Use(OctetStream);
 
-  App.Use(OctetStream);
-
-  App.Get('pdf',
+  THorse.Get('pdf',
     procedure(Req: THorseRequest; Res: THorseResponse; Next: TProc)
     var
       LStream: TFileStream;
     begin
-      LStream := TFileStream.Create('D:\Embarcadero\CodeRage\4-octet-stream\horse.pdf', fmOpenRead);
+      LStream := TFileStream.Create('C:\Users\vinic\Downloads\coderage\octet-stream\horse.pdf', fmOpenRead);
       Res.Send(LStream);
     end);
 
-  App.Start;
+  THorse.Post('pdf',
+    procedure(Req: THorseRequest; Res: THorseResponse; Next: TProc)
+    begin
+      Req.Body<TMemoryStream>.SaveToFile('C:\Users\vinic\Downloads\coderage\octet-stream\novo.pdf');
+      Res.Status(THTTPStatus.NoContent);
+    end);
+
+  THorse.Listen;
 end.
